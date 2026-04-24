@@ -4,3 +4,5 @@ dist/
 .ultrabuild/
 .env
 .DS_Store
+
+.worktrees/
