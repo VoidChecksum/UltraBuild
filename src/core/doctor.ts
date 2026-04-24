@@ -1,6 +1,8 @@
 import { access, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { loadConfig } from "./config.js";
+import { box, color, renderPill } from "./ui.js";
+import { getVibeStatus } from "./vibe.js";
 
 export interface DoctorCheck {
   name: string;
@@ -26,7 +28,7 @@ export async function runDoctor(options: { home: string; cwd: string }): Promise
   }
   try {
     const config = await loadConfig(options.home);
-    checks.push({ name: "config", ok: true, detail: `${Object.keys(config.providers).length} provider(s)` });
+    checks.push({ name: "config", ok: true, detail: `${Object.keys(config.providers).length} provider(s), mode ${config.defaultMode}` });
   } catch (error) {
     checks.push({ name: "config", ok: false, detail: String(error) });
   }
@@ -36,9 +38,14 @@ export async function runDoctor(options: { home: string; cwd: string }): Promise
   } catch (error) {
     checks.push({ name: "workspace", ok: false, detail: String(error) });
   }
+  const vibe = await getVibeStatus();
+  checks.push({ name: "vibe-island", ok: true, detail: vibe.reachable ? `reachable at ${vibe.path}` : `not running (${vibe.path})` });
   return { checks, ok: checks.every((check) => check.ok) };
 }
 
 export function formatDoctor(report: DoctorReport): string {
-  return report.checks.map((check) => `${check.ok ? "✓" : "✗"} ${check.name}: ${check.detail}`).join("\n");
+  return box(
+    `${color("UltraBuild", "cyan")} doctor ${report.ok ? renderPill("healthy", "green") : renderPill("attention", "danger")}`,
+    report.checks.map((check) => `${check.ok ? color("✓", "green") : color("✗", "danger")} ${check.name}: ${check.detail}`).join("\n"),
+  );
 }

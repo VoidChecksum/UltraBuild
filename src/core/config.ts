@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { ensureDir } from "./platform.js";
+import type { ModeName } from "./modes.js";
 
 export type ApprovalMode = "ask" | "auto" | "deny";
 
@@ -31,10 +32,24 @@ export type ProviderConfig =
       model: string;
     };
 
+export interface UiConfig {
+  theme: "neon" | "plain";
+  splash: boolean;
+}
+
+export interface IntegrationConfig {
+  vibeIsland: {
+    enabled: boolean;
+  };
+}
+
 export interface UltraBuildConfig {
   defaultProvider: string;
   defaultModel: string;
+  defaultMode: ModeName;
   approval: ApprovalConfig;
+  ui: UiConfig;
+  integrations: IntegrationConfig;
   providers: Record<string, ProviderConfig>;
 }
 
@@ -42,11 +57,19 @@ export function defaultConfig(): UltraBuildConfig {
   return {
     defaultProvider: "mock",
     defaultModel: "mock-smart",
+    defaultMode: "chat",
     approval: {
       mode: "ask",
       allowRead: true,
       allowWrite: false,
       allowBash: false,
+    },
+    ui: {
+      theme: "neon",
+      splash: true,
+    },
+    integrations: {
+      vibeIsland: { enabled: true },
     },
     providers: {
       mock: { type: "mock", model: "mock-smart" },
@@ -90,6 +113,15 @@ function mergeConfig(base: UltraBuildConfig, override: Partial<UltraBuildConfig>
     ...base,
     ...override,
     approval: { ...base.approval, ...(override.approval || {}) },
+    ui: { ...base.ui, ...(override.ui || {}) },
+    integrations: {
+      ...base.integrations,
+      ...(override.integrations || {}),
+      vibeIsland: {
+        ...base.integrations.vibeIsland,
+        ...(override.integrations?.vibeIsland || {}),
+      },
+    },
     providers: { ...base.providers, ...(override.providers || {}) },
   };
 }
