@@ -1,0 +1,30 @@
+{
+  "name": "ultrabuild",
+  "version": "0.1.0",
+  "description": "The cross-platform agentic harness for every model, every agent, and every tool.",
+  "type": "module",
+  "bin": {
+    "ultrabuild": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/postbuild.mjs",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "node dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "agentic",
+    "coding-agent",
+    "cli",
+    "ai",
+    "harness",
+    "agents"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}

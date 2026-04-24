@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="160" viewBox="0 0 1400 160" role="img" aria-label="UltraBuild footer">
+  <defs><linearGradient id="line" x1="0" x2="1"><stop stop-color="#00e5ff"/><stop offset="0.5" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient></defs>
+  <rect width="1400" height="160" rx="28" fill="#070812"/>
+  <path d="M60 42h1280" stroke="url(#line)" stroke-width="5"/>
+  <text x="700" y="94" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="700" fill="#f8fafc">UltraBuild</text>
+  <text x="700" y="126" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" fill="#67e8f9">every model · every workflow · every platform · one harness</text>
+</svg>

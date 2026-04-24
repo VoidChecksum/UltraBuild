@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Flux, the UltraBuild forge-dragon mascot">
+  <defs>
+    <linearGradient id="flame" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#00e5ff"/><stop offset="0.55" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#090a16"/>
+  <path d="M96 366c38-80 78-114 139-119 10-49 46-82 105-98-8 30-6 54 5 73 28 7 51 23 69 49-37 2-66 13-88 32 2 43-21 75-67 96-55 25-112 14-163-33Z" fill="#111827" stroke="url(#flame)" stroke-width="10" filter="url(#glow)"/>
+  <path d="M240 248c24 17 44 18 62 4-2 31-19 52-49 63-5-27-9-48-13-67Z" fill="#00e5ff" opacity="0.85"/>
+  <path d="M329 152 382 98l-8 75" fill="none" stroke="#ff2bd6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="319" cy="226" r="10" fill="#f8fafc"/>
+  <path d="M356 245c37 4 58 20 63 48-36-16-63-14-82 5" fill="none" stroke="#00e5ff" stroke-width="9" stroke-linecap="round"/>
+  <path d="M129 363 70 421" stroke="#a3e635" stroke-width="14" stroke-linecap="round"/>
+  <rect x="54" y="410" width="89" height="36" rx="8" fill="#111827" stroke="#a3e635" stroke-width="8" transform="rotate(-10 98 428)"/>
+  <text x="98" y="435" text-anchor="middle" font-family="monospace" font-size="22" fill="#a3e635">$_</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420" role="img" aria-label="UltraBuild banner">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#060712"/><stop offset="0.5" stop-color="#111033"/><stop offset="1" stop-color="#1a0624"/></linearGradient>
+    <linearGradient id="neon" x1="0" x2="1"><stop stop-color="#00e5ff"/><stop offset="0.5" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1400" height="420" rx="42" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#6ee7ff"><path d="M0 80h1400M0 160h1400M0 240h1400M0 320h1400M140 0v420M280 0v420M420 0v420M560 0v420M700 0v420M840 0v420M980 0v420M1120 0v420M1260 0v420"/></g>
+  <circle cx="1170" cy="205" r="120" fill="none" stroke="url(#neon)" stroke-width="8" filter="url(#glow)"/>
+  <path d="M1088 260c26-54 54-77 95-80 7-33 31-55 71-66-5 20-4 36 4 49 19 5 35 16 47 33-25 1-45 9-60 22 1 29-14 51-45 65-37 17-75 9-112-23Z" fill="#101827" stroke="url(#neon)" stroke-width="7" filter="url(#glow)"/>
+  <text x="92" y="165" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="88" font-weight="800" fill="#f8fafc" filter="url(#glow)">UltraBuild</text>
+  <text x="96" y="226" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" fill="#c4b5fd">The agentic harness for every model, every agent, every OS.</text>
+  <text x="96" y="294" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="26" fill="#67e8f9">$ ultrabuild --provider any --skills superpowers --workers 8</text>
+  <rect x="92" y="325" width="640" height="44" rx="22" fill="#0f172a" stroke="url(#neon)"/>
+  <text x="122" y="355" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" fill="#a3e635">Flux says: plan → build → verify → ship</text>
+</svg>
