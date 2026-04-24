@@ -80,7 +80,8 @@ async function extractStoredZip(artifactPath, destination) {
 }
 
 function run(command, args, cwd, env) {
-  const child = spawnSync(command, args, { cwd, env, encoding: "utf8", timeout: 20_000, shell: false });
+  const useShell = process.platform === "win32" && command.toLowerCase().endsWith(".cmd");
+  const child = spawnSync(command, args, { cwd, env, encoding: "utf8", timeout: 20_000, shell: useShell });
   if (child.status !== 0) {
     console.error(`Command failed: ${command} ${args.join(" ")}`);
     console.error(child.stdout);

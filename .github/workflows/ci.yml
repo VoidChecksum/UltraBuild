@@ -23,7 +23,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - run: npm run build
-      - run: node dist/cli.js --help
-      - run: node dist/cli.js doctor
-      - run: node dist/cli.js --provider mock --print "hello from ci"
+        env:
+          ULTRABUILD_HOME: ${{ runner.temp }}/ultrabuild-home-test
+      - run: npm run e2e
+        env:
+          ULTRABUILD_HOME: ${{ runner.temp }}/ultrabuild-home-e2e
+      - run: npm run package:all
+      - run: npm run smoke:release
+        env:
+          ULTRABUILD_HOME: ${{ runner.temp }}/ultrabuild-home-release
+      - name: Upload release bundles
+        if: github.event_name == 'push' && matrix.os == 'ubuntu-latest' && matrix.node == 22
+        uses: actions/upload-artifact@v4
+        with:
+          name: ultrabuild-release-bundles
+          path: release/*

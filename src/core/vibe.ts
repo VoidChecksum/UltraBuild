@@ -63,6 +63,7 @@ export function createVibeEvent(input: {
 }
 
 export async function getVibeStatus(options: VibeOptions = {}): Promise<{ reachable: boolean; path: string; error?: string }> {
+  if (options.enabled === false) return { reachable: false, path: vibePath(options), error: "disabled" };
   const result = await sendRaw({ hook_event_name: "Notification", session_id: "ultrabuild-status", _source: "ultrabuild", _ppid: process.pid, _env: {} }, options);
   return { reachable: result.sent, path: result.path, error: result.error };
 }
