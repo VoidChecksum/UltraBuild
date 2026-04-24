@@ -80,6 +80,7 @@ async function interactive(home: string, cwd: string, provider: string | undefin
   const config = await loadConfig(home);
   const skills = await loadAllSkills(home);
   let mode = initialMode || config.defaultMode;
+  let lastSessionId: string | undefined;
   const rl = readline.createInterface({ input, output });
   console.log(splash());
   console.log(renderStatus({ provider: provider || config.defaultProvider, mode, os: process.platform }));
@@ -120,10 +121,14 @@ async function interactive(home: string, cwd: string, provider: string | undefin
         continue;
       }
       const result = await runAgentTurn({ prompt, config, home, cwd, providerName: provider, modeName: mode, print: false, yes, vibeEnabled, skills });
+      lastSessionId = result.sessionId;
       console.log(renderStatus({ provider: result.provider, mode: result.mode, session: result.sessionId.slice(0, 8) }));
       console.log(section("ASSISTANT", result.text));
     }
   } finally {
+    if (lastSessionId && vibeEnabled) {
+      await sendVibeEvent(createVibeEvent({ sessionId: lastSessionId, hookEventName: "SessionEnd", cwd }), { enabled: true });
+    }
     rl.close();
   }
 }
