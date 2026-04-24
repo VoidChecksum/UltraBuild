@@ -9,6 +9,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json && node scripts/postbuild.mjs",
     "test": "npm run build && node scripts/run-tests.mjs",
+    "e2e": "npm run build && node scripts/e2e.mjs",
+    "package:all": "node scripts/package-release.mjs",
+    "smoke:release": "node scripts/smoke-release.mjs",
     "start": "node dist/cli.js"
   },
   "engines": {
