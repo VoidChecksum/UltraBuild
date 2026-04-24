@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-label="UltraBuild terminal screenshot mockup">
+  <defs>
+    <linearGradient id="edge" x1="0" x2="1"><stop stop-color="#00e5ff"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1400" height="820" rx="46" fill="#060712"/>
+  <rect x="70" y="62" width="1260" height="696" rx="28" fill="#0b1020" stroke="url(#edge)" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="112" cy="104" r="12" fill="#ff5f56"/><circle cx="150" cy="104" r="12" fill="#ffbd2e"/><circle cx="188" cy="104" r="12" fill="#27c93f"/>
+  <text x="230" y="113" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#94a3b8">UltraBuild · Flux terminal</text>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="26">
+    <text x="108" y="172" fill="#67e8f9">╭─ UltraBuild help ─────────────────────────────────────────────────────────╮</text>
+    <text x="108" y="215" fill="#f8fafc">│   interactive  ultrabuild                                               │</text>
+    <text x="108" y="258" fill="#f8fafc">│   modes        ultrabuild --mode plan --print "plan a feature"         │</text>
+    <text x="108" y="301" fill="#f8fafc">│   vibe         ultrabuild vibe status | ultrabuild vibe test           │</text>
+    <text x="108" y="344" fill="#67e8f9">╰───────────────────────────────────────────────────────────────────────────╯</text>
+    <text x="108" y="410" fill="#94a3b8">$ ultrabuild --mode plan --provider mock --print "ship a feature"</text>
+    <text x="108" y="462" fill="#67e8f9"> provider:mock    mode:plan    session:8f19cafe </text>
+    <text x="108" y="520" fill="#a3e635">ASSISTANT</text>
+    <text x="108" y="562" fill="#f8fafc">UltraBuild mock response for: ship a feature</text>
+    <text x="108" y="604" fill="#c4b5fd">Tools available: read, list, grep</text>
+    <text x="108" y="668" fill="#ff2bd6">Flux says: plan → build → verify → ship.</text>
+  </g>
+</svg>

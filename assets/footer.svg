@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="160" viewBox="0 0 1400 160" role="img" aria-label="UltraBuild footer">
-  <defs><linearGradient id="line" x1="0" x2="1"><stop stop-color="#00e5ff"/><stop offset="0.5" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient></defs>
-  <rect width="1400" height="160" rx="28" fill="#070812"/>
-  <path d="M60 42h1280" stroke="url(#line)" stroke-width="5"/>
-  <text x="700" y="94" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="700" fill="#f8fafc">UltraBuild</text>
-  <text x="700" y="126" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" fill="#67e8f9">every model · every workflow · every platform · one harness</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="180" viewBox="0 0 1600 180" role="img" aria-label="UltraBuild footer">
+  <defs>
+    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#00e5ff"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="180" rx="36" fill="#060712"/>
+  <path d="M80 46h1440" stroke="url(#line)" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+  <text x="800" y="104" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="900" fill="#f8fafc">UltraBuild</text>
+  <text x="800" y="140" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" fill="#67e8f9">plan · build · review · debug · workers · vibe island · every OS</text>
 </svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="UltraBuild icon">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#00e5ff"/><stop offset=".52" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#f8fafc"/>
+  <rect x="36" y="36" width="440" height="440" rx="92" fill="#060712"/>
+  <path d="M134 355c45-94 92-134 164-140 12-57 54-96 124-115-9 36-7 64 6 86 33 9 60 28 81 58-43 2-78 15-103 38 2 50-25 88-79 113-65 29-132 16-193-40Z" fill="#0f172a" stroke="url(#g)" stroke-width="12" filter="url(#glow)"/>
+  <circle cx="373" cy="241" r="12" fill="#fff"/>
+  <path d="M143 359 82 420" stroke="#a3e635" stroke-width="17" stroke-linecap="round"/>
+  <rect x="64" y="404" width="93" height="39" rx="8" fill="#0f172a" stroke="#a3e635" stroke-width="8" transform="rotate(-10 110 424)"/>
+</svg>

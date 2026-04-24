@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="UltraBuild social preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#060712"/><stop offset=".5" stop-color="#111033"/><stop offset="1" stop-color="#2a0a2e"/></linearGradient>
+    <linearGradient id="g" x1="0" x2="1"><stop stop-color="#00e5ff"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff2bd6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="640" rx="64" fill="url(#bg)"/>
+  <g opacity=".2" stroke="#67e8f9"><path d="M0 128h1280M0 256h1280M0 384h1280M0 512h1280M160 0v640M320 0v640M480 0v640M640 0v640M800 0v640M960 0v640M1120 0v640"/></g>
+  <text x="80" y="178" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="96" font-weight="900" fill="#f8fafc" filter="url(#glow)">UltraBuild</text>
+  <text x="84" y="250" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#c4b5fd">the standalone agentic harness</text>
+  <text x="84" y="319" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" fill="#67e8f9">modes · providers · tools · workers · Vibe Island</text>
+  <rect x="84" y="380" width="620" height="70" rx="35" fill="#0f172a" stroke="url(#g)" stroke-width="4"/>
+  <text x="124" y="425" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" fill="#a3e635">npm run package:all</text>
+  <g transform="translate(790 114) scale(.68)">
+    <circle cx="320" cy="300" r="230" fill="none" stroke="url(#g)" stroke-width="16" filter="url(#glow)"/>
+    <path d="M116 458c49-103 101-146 179-153 13-63 59-105 136-126-10 39-8 71 7 94 36 9 66 30 89 63-48 2-85 17-113 42 2 55-27 97-86 124-71 32-144 18-212-44Z" fill="#111827" stroke="url(#g)" stroke-width="16" filter="url(#glow)"/>
+    <circle cx="404" cy="278" r="16" fill="#fff"/>
+    <path d="M154 453 80 527" stroke="#a3e635" stroke-width="22" stroke-linecap="round"/>
+  </g>
+</svg>
