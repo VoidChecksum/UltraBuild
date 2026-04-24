@@ -54,7 +54,12 @@ async function stagePackage(packageRoot, target) {
 }
 
 function run(command, args) {
-  const child = spawnSync(command, args, { cwd: root, stdio: "inherit", shell: false });
+  const useShell = process.platform === "win32" && command.toLowerCase().endsWith(".cmd");
+  const child = spawnSync(command, args, { cwd: root, stdio: "inherit", shell: useShell });
+  if (child.error) {
+    console.error(child.error.message);
+    process.exit(1);
+  }
   if (child.status !== 0) process.exit(child.status ?? 1);
 }
 
