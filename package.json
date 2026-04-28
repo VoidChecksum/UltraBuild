@@ -6,6 +6,14 @@
   "bin": {
     "ultrabuild": "dist/cli.js"
   },
+  "files": [
+    "dist/",
+    "skills/",
+    "docs/",
+    "assets/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json && node scripts/postbuild.mjs",
     "test": "npm run build && node scripts/run-tests.mjs",
@@ -26,6 +34,14 @@
     "agents"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoidChecksum/UltraBuild.git"
+  },
+  "homepage": "https://github.com/VoidChecksum/UltraBuild#readme",
+  "bugs": {
+    "url": "https://github.com/VoidChecksum/UltraBuild/issues"
+  },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "typescript": "^5.7.0"

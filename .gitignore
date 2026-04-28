@@ -1,10 +1,34 @@
+# Dependencies and build/release output
 node_modules/
 dist/
 release/
 .release-staging/
 .coverage/
 .ultrabuild/
-.env
-.DS_Store
 
+# Local/editor/agent state
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+.omc/
+.serena/
 .worktrees/
+
+# Secrets and credentials
+.env*
+!.env.example
+.npmrc
+.pypirc
+*.key
+*.pem
+*.p12
+*.crt
+*.cert
+credentials/
+cookies/
+secrets.*
+*.secret
+*.db
+*.sqlite
